@@ -77,13 +77,11 @@
 
             allProducts() {
                
-//?token='+localStorage.getItem('token')
 
                 axios.get('http://127.0.0.1:8000/api/all-products').then(res => {
 
                     this.products = res.data.data;
-                    //alert(this.products)
-                    // console.log(res.data.data.products);
+                    
                 });
 
                
@@ -101,7 +99,6 @@
               
               });
 
-             // console.log(productId);
             }
         },
 

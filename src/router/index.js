@@ -7,14 +7,11 @@ import ProductsView from "../views/ProductsView.vue";
 import CreateProductsView from "../views/CreateProductsView.vue";
 import EditProductsView from "../views/EditProductsView.vue";
 
-import store from '../store';
+//import store from '../store';
 
 Vue.use(VueRouter);
 
-// const routes = [
- 
-  
-// ];
+
 
 
 
@@ -85,7 +82,6 @@ router.beforeEach(( to, from, next) => {
 
   if(to.matched.some(record => record.meta.secure)) {
 
-   // if(!store.state.loggedIn) {
     if(!localStorage.getItem("token") == null) {
 
       next({
@@ -102,10 +98,7 @@ router.beforeEach(( to, from, next) => {
 
     if(localStorage.getItem("token") == null) {
 
-      // if(to.path == "/products") {
-      //   alert('you are unautherzied');
-      //   router.push('/');
-      // }
+     
 
       next();
      
