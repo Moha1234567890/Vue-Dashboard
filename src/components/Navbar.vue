@@ -3,7 +3,7 @@
 
 
     <nav  class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 50px;">
-      <router-link class="navbar-brand" to="/">Dashboard</router-link>
+      <router-link class="navbar-brand" to="/products">Dashboard for Products</router-link>
     
         <button
           class="navbar-toggler"
@@ -16,6 +16,8 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+      
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item" v-if="!loggedIn">
@@ -35,9 +37,15 @@
           </ul>
         </div>
       </nav>
+
+      
+  
 </template>
 
+<style>
 
+
+</style>
 <script>
 
   export default {
